@@ -14,7 +14,7 @@ module HelloRailsBackEnd
      # CORS configuration
      config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3001' # Add the origin(s) allowed to make requests
+        origins '*' # Add the origin(s) allowed to make requests
         resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options]
       end
     end
